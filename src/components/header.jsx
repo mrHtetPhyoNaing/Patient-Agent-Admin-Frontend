@@ -5,7 +5,7 @@ import Popup from "../common/popup";
 
 const Header = () => {
   const [popupVisibility, setPopupVisibility] = useState(false);
-  const [popupElements] = useState([
+  const [popupItems] = useState([
     {
       iconName: "person-outline",
       label: "Account",
@@ -46,7 +46,7 @@ const Header = () => {
 
           <Avatar onClick={() => setPopupVisibility(!popupVisibility)} />
 
-          {popupVisibility ? <Popup popUpElements={popupElements} /> : null}
+          {popupVisibility ? <Popup items={popupItems} /> : null}
         </div>
         {/* end header  */}
       </div>
