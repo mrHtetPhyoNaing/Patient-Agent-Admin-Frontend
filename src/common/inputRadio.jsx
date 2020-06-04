@@ -1,22 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
 
 const InputRadio = (props) => {
-  const [properties] = useState(props.properties);
+  const { classes, id, name, checked, label } = props;
 
   return (
     <React.Fragment>
       <input
-        className={properties.classes}
+        className={classes}
         type="radio"
-        id={properties.id}
-        name={properties.name}
-        defaultChecked={properties.checked}
+        id={id}
+        name={name}
+        defaultChecked={checked}
       />
-      <label
-        htmlFor={properties.id}
-        className="ml-2 text-gray-800 text-xs md:text-sm"
-      >
-        {properties.label}
+      <label htmlFor={id} className="ml-2 text-gray-800 text-xs md:text-sm">
+        {label}
       </label>
     </React.Fragment>
   );
