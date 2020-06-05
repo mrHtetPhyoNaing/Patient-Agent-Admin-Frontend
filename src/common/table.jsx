@@ -3,6 +3,7 @@ import getRegisterations from "../services/fakeRegisterations";
 import TableDescription from "./tableDescription";
 import TableHeader from "./tableHeader";
 import TableBody from "./tableBody";
+import Pagination from "./pagination";
 
 const Table = (props) => {
   const [data] = useState(getRegisterations());
@@ -28,6 +29,8 @@ const Table = (props) => {
 
         <TableBody items={data} />
       </div>
+
+      <Pagination />
     </div>
   );
 };

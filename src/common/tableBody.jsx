@@ -6,20 +6,30 @@ const TableBody = (props) => {
   function renderElement(status) {
     if (status === 0) {
       return (
-        <button class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-1 px-2 rounded-full">
-          Send
+        <button>
+          <ion-icon
+            name="navigate-circle"
+            class="align-middle text-indigo-400 bg-indigo-100 rounded-full"
+            size="large"
+          ></ion-icon>
         </button>
       );
     } else if (status === 1) {
       return (
-        <span class="bg-green-100 text-green-500 font-bold py-2 px-2 rounded-full disable">
-          Sent
-        </span>
+        <ion-icon
+          name="checkmark-done-circle"
+          class="align-middle text-green-400 bg-green-100 rounded-full"
+          size="large"
+        ></ion-icon>
       );
     } else if (status === 2) {
       return (
-        <button class="bg-orange-500 hover:bg-orange-700 text-white font-bold py-1 px-2 rounded-full">
-          Retry
+        <button>
+          <ion-icon
+            name="reload-circle"
+            class="align-middle text-orange-400 bg-orange-100 rounded-full"
+            size="large"
+          ></ion-icon>
         </button>
       );
     }
