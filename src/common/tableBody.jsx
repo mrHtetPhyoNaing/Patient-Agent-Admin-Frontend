@@ -66,9 +66,9 @@ const TableBody = (props) => {
     const data = [...items];
 
     data.map((d) => {
-      if (d.popupVisibility === true && d !== registeration) {
+      if (d.popupVisibility === true && d !== registeration)
         return delete d.popupVisibility;
-      }
+      return d;
     });
 
     const index = data.indexOf(registeration);
@@ -89,43 +89,13 @@ const TableBody = (props) => {
 
             {/* phone:view more */}
             <div className="md:hidden py-1 text-sm text-gray-700 relative">
-              <a className="inline-flex w-6 h-6 items-center justify-center cursor-pointer hover:bg-indigo-100 rounded-full">
+              <button
+                onClick={() => handleViewMore(item)}
+                className="inline-flex w-6 h-6 items-center justify-center cursor-pointer hover:bg-indigo-100 rounded-full"
+              >
                 <ion-icon name="ellipsis-vertical-outline"></ion-icon>
-              </a>
-              <div className="absolute w-40 right-0 bg-white p-2 rounded-lg shadow-md border">
-                <div className="py-1 px-3 cursor-pointer text-gray-800 hover:bg-orange-100 hover:text-orange-500 rounded-lg">
-                  <ion-icon
-                    name="create-outline"
-                    className="align-middle"
-                    size="small"
-                  ></ion-icon>
-                  <span className="px-3 align-middle text-xs">Edit</span>
-                </div>
-                <div className="py-1 px-3 cursor-pointer text-gray-800 hover:bg-red-100 hover:text-red-500 rounded-lg">
-                  <ion-icon
-                    name="trash-outline"
-                    className="align-middle"
-                    size="small"
-                  ></ion-icon>
-                  <span className="px-3 align-middle text-xs">Delete</span>
-                </div>
-                <div className="py-1 px-3 cursor-pointer text-gray-800 hover:bg-green-100 hover:text-green-500 rounded-lg">
-                  <ion-icon
-                    name="document-text-outline"
-                    className="align-middle"
-                    size="small"
-                  ></ion-icon>
-                  <span className="px-3 align-middle text-xs">View PDF</span>
-                </div>
-                <div className="py-1 px-3 cursor-pointer text-gray-800 hover:bg-indigo-100 hover:text-indigo-700 rounded-lg">
-                  <ion-icon
-                    name="trending-up-outline"
-                    className="align-middle"
-                    size="small"
-                  ></ion-icon>
-                  <span className="px-3 align-middle text-xs">View More</span>
-                </div>
-              </div>
+              </button>
+              {item.popupVisibility ? <Popup items={popupItems} /> : null}
             </div>
             {/* end phone:view more */}
           </div>
