@@ -1,7 +1,7 @@
 import React from "react";
 
 const InputRadio = (props) => {
-  const { classes, id, name, checked, label } = props;
+  const { classes, id, name, checked, label, value, changed } = props;
 
   return (
     <React.Fragment>
@@ -11,6 +11,8 @@ const InputRadio = (props) => {
         id={id}
         name={name}
         defaultChecked={checked}
+        value={value}
+        onClick={changed}
       />
       <label htmlFor={id} className="ml-2 text-gray-800 text-xs md:text-sm">
         {label}
