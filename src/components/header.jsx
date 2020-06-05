@@ -1,25 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import logo from "../assets/logo.svg";
-import Avatar from "../common/avatar";
-import Popup from "../common/popup";
+import AvatarBox from "./avatarBox";
 
 const Header = () => {
-  const [popupVisibility, setPopupVisibility] = useState(false);
-  const [popupItems] = useState([
-    {
-      iconName: "person-outline",
-      label: "Account",
-      hoverBg: "bg-indigo-100",
-      hoverText: "text-indigo-700",
-    },
-    {
-      iconName: "log-out-outline",
-      label: "Logout",
-      hoverBg: "bg-red-100",
-      hoverText: "text-red-500",
-    },
-  ]);
-
   return (
     <div className="bg-indigo-500">
       <div className="container mx-auto p-5 sm:p-8">
@@ -44,9 +27,7 @@ const Header = () => {
           </div>
           {/* end logo */}
 
-          <Avatar onClick={() => setPopupVisibility(!popupVisibility)} />
-
-          {popupVisibility ? <Popup items={popupItems} /> : null}
+          <AvatarBox />
         </div>
         {/* end header  */}
       </div>
