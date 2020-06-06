@@ -33,7 +33,7 @@ const TableBody = (props) => {
   function renderElement(status) {
     if (status === 0) {
       return (
-        <button>
+        <button title="Send mail">
           <ion-icon
             name="navigate-circle"
             class="align-middle text-indigo-400 bg-indigo-100 rounded-full"
@@ -47,11 +47,12 @@ const TableBody = (props) => {
           name="checkmark-done-circle"
           class="align-middle text-green-400 bg-green-100 rounded-full"
           size="large"
+          title="Sent mail"
         ></ion-icon>
       );
     } else if (status === 2) {
       return (
-        <button>
+        <button title="Retry sending mail">
           <ion-icon
             name="reload-circle"
             class="align-middle text-orange-400 bg-orange-100 rounded-full"
@@ -125,7 +126,9 @@ const TableBody = (props) => {
                 <ion-icon name="ellipsis-vertical-outline"></ion-icon>
               </button>
 
+              {/* view more */}
               {item.popupVisibility ? <Popup items={popupItems} /> : null}
+              {/* view more */}
             </div>
             {/* end vertical dots */}
           </div>
