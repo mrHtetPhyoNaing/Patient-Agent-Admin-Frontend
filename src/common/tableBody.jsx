@@ -1,9 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Popup from "../common/popup";
 
 const TableBody = (props) => {
-  const [items, setItems] = useState(props.items);
-  const [popupItems] = useState([
+  const { items: passedItems } = props;
+  const [items, setItems] = useState(passedItems);
+  useEffect(() => {
+    setItems(passedItems);
+  }, [passedItems]);
+
+  const popupItems = [
     {
       iconName: "create-outline",
       label: "Edit",
@@ -28,7 +33,7 @@ const TableBody = (props) => {
       hoverBg: "bg-ingido-100",
       hoverText: "text-indigo-500",
     },
-  ]);
+  ];
 
   function renderElement(status) {
     if (status === 0) {
@@ -64,6 +69,7 @@ const TableBody = (props) => {
   }
 
   function handleViewMore(registeration) {
+    console.log("clicked");
     const data = [...items];
 
     data.map((d) => {
