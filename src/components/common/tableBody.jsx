@@ -12,26 +12,26 @@ const TableBody = (props) => {
     {
       iconName: "create-outline",
       label: "Edit",
-      hoverBg: "bg-orange-100",
-      hoverText: "text-orange-500",
+      hoverBgColor: "orange-100",
+      hoverTextColor: "orange-500",
     },
     {
       iconName: "trash-outline",
       label: "Delete",
-      hoverBg: "bg-red-100",
-      hoverText: "text-red-500",
+      hoverBgColor: "red-100",
+      hoverTextColor: "red-500",
     },
     {
       iconName: "document-text-outline",
       label: "View PDF",
-      hoverBg: "bg-green-100",
-      hoverText: "text-green-500",
+      hoverBgColor: "green-100",
+      hoverTextColor: "green-500",
     },
     {
       iconName: "trending-up-outline",
       label: "View More",
-      hoverBg: "bg-ingido-100",
-      hoverText: "text-indigo-500",
+      hoverBgColor: "ingido-100",
+      hoverTextColor: "indigo-500",
     },
   ];
 

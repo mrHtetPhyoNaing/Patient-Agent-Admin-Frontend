@@ -1,8 +1,14 @@
 import React from "react";
 
-const InputRadio = (props) => {
-  const { classes, id, name, checked, label, value, changed } = props;
-
+const InputRadio = ({
+  classes = "pl-5 inline-block cursor-pointer",
+  id,
+  name,
+  defaultChecked,
+  label,
+  value,
+  changed,
+}) => {
   return (
     <React.Fragment>
       <input
@@ -10,7 +16,7 @@ const InputRadio = (props) => {
         type="radio"
         id={id}
         name={name}
-        defaultChecked={checked}
+        defaultChecked={defaultChecked}
         value={value}
         onClick={changed}
       />

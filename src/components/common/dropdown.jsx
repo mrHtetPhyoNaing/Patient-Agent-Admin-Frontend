@@ -1,8 +1,6 @@
 import React from "react";
 
-const DropDown = (props) => {
-  const { items, onChange } = props;
-
+const DropDown = ({ items, onChange }) => {
   return (
     <select
       onChange={onChange}

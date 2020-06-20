@@ -1,8 +1,6 @@
 import React from "react";
 
-const Avatar = (props) => {
-  const { onClick } = props;
-
+const Avatar = ({ onClick }) => {
   return (
     <div
       onClick={onClick}

@@ -1,16 +1,14 @@
 import React from "react";
 
-const Popup = (props) => {
-  const { items } = props;
-
+const Popup = ({ items }) => {
   return (
     <div className="absolute right-0 bg-white p-2 mt-1 rounded-lg shadow-md border z-10">
       {items.map((item) => (
         <div
           key={item.label}
-          className={`py-1 px-3 cursor-pointer w-32 text-gray-800 
-          hover:${item.hoverBg} 
-          hover:${item.hoverText} rounded-lg`}
+          className={`py-1 px-3 cursor-pointer w-32 text-gray-800 rounded-lg 
+          hover:bg-${item.hoverBgColor}
+          hover:text-${item.hoverTextColor}`}
         >
           <ion-icon
             name={item.iconName}
