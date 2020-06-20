@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Avatar from "../common/avatar";
-import Popup from "../common/popup";
+import Avatar from "./common/avatar";
+import Popup from "./common/popup";
 
 const AvatarBox = (props) => {
   const [popupVisibility, setPopupVisibility] = useState(false);

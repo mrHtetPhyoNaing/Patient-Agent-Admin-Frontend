@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import imgNoData from "../assets/nodata.svg";
 import getRegisterations from "../services/fakeRegisterations";
-import Table from "../common/table";
+import Table from "./common/table";
 
 const Registerations = (props) => {
   let [data] = useState(getRegisterations());

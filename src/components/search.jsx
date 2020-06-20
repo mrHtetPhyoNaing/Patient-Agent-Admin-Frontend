@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import DropDown from "../common/dropdown";
-import InputText from "../common/inputText";
-import Button from "../common/button";
+import DropDown from "./common/dropdown";
+import InputText from "./common/inputText";
+import Button from "./common/button";
 
 const Search = () => {
   const [searchItems] = useState([

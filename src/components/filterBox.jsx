@@ -1,5 +1,5 @@
 import React from "react";
-import InputRadio from "../common/inputRadio";
+import InputRadio from "./common/inputRadio";
 
 const FilterBox = (props) => {
   const { selection, onChange } = props;

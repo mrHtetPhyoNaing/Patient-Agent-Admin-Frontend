@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Button from "../common/button";
+import Button from "./common/button";
 import FilterBox from "./filterBox";
 
 const Filter = () => {

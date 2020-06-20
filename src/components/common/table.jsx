@@ -3,7 +3,7 @@ import TableDescription from "./tableDescription";
 import TableHeader from "./tableHeader";
 import TableBody from "./tableBody";
 import Pagination from "./pagination";
-import { paginate } from "../util/paginate";
+import { paginate } from "../../util/paginate";
 
 const Table = (props) => {
   const { description, itemCount, tableHeaders, items } = props;
@@ -16,7 +16,7 @@ const Table = (props) => {
   }
 
   const registerations = paginate(items, currentPage, pageSize);
-  
+
   return (
     <React.Fragment>
       <TableDescription description={description} count={itemCount} />
