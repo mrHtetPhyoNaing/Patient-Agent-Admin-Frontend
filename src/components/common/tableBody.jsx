@@ -1,75 +1,43 @@
 import React, { useState, useEffect } from "react";
 import Popup from "../common/popup";
+import Icon from "./icon";
 
-const TableBody = (props) => {
-  const { items: passedItems } = props;
+const TableBody = ({ items: passedItems, popupItems }) => {
   const [items, setItems] = useState(passedItems);
+
   useEffect(() => {
     setItems(passedItems);
   }, [passedItems]);
 
-  const popupItems = [
-    {
-      iconName: "create-outline",
-      label: "Edit",
-      hoverBgColor: "orange-100",
-      hoverTextColor: "orange-500",
-    },
-    {
-      iconName: "trash-outline",
-      label: "Delete",
-      hoverBgColor: "red-100",
-      hoverTextColor: "red-500",
-    },
-    {
-      iconName: "document-text-outline",
-      label: "View PDF",
-      hoverBgColor: "green-100",
-      hoverTextColor: "green-500",
-    },
-    {
-      iconName: "trending-up-outline",
-      label: "View More",
-      hoverBgColor: "ingido-100",
-      hoverTextColor: "indigo-500",
-    },
-  ];
-
-  function renderElement(status) {
+  function renderStatusIcon(status) {
     if (status === 0) {
       return (
-        <button title="Send mail">
-          <ion-icon
-            name="navigate-circle"
-            class="align-middle text-indigo-400 bg-indigo-100 rounded-full"
-            size="large"
-          ></ion-icon>
-        </button>
+        <Icon
+          title="Send mail"
+          name="navigate-circle"
+          classes="text-indigo-400 bg-indigo-100"
+        />
       );
     } else if (status === 1) {
       return (
-        <ion-icon
+        <Icon
+          title="Successfully Sent"
           name="checkmark-done-circle"
-          class="align-middle text-green-400 bg-green-100 rounded-full"
-          size="large"
-          title="Sent mail"
-        ></ion-icon>
+          classes="text-green-400 bg-green-100"
+        />
       );
     } else if (status === 2) {
       return (
-        <button title="Retry sending mail">
-          <ion-icon
-            name="reload-circle"
-            class="align-middle text-orange-400 bg-orange-100 rounded-full"
-            size="large"
-          ></ion-icon>
-        </button>
+        <Icon
+          title="Retry sending mail"
+          name="reload-circle"
+          classes="text-orange-400 bg-orange-100"
+        />
       );
     }
   }
 
   function handleViewMore(registeration) {
-    console.log("clicked");
     const data = [...items];
 
     data.map((d) => {
@@ -85,7 +53,7 @@ const TableBody = (props) => {
   }
 
   return (
-    <React.Fragment>
+    <>
       {items.map((item) => (
         <div
           key={item.id}
@@ -93,7 +61,6 @@ const TableBody = (props) => {
         >
           <div className="flex md:table-cell md:border-b px-6 py-1 md:py-3 text-sm text-gray-700 items-center">
             <span className="flex-auto text-indigo-500">#{item.id}</span>
-
             {/* phone:view more */}
             <div className="md:hidden py-1 text-sm text-gray-700 relative">
               <button
@@ -102,7 +69,7 @@ const TableBody = (props) => {
               >
                 <ion-icon name="ellipsis-vertical-outline"></ion-icon>
               </button>
-              {item.popupVisibility ? <Popup items={popupItems} /> : null}
+              {item.popupVisibility && <Popup items={popupItems} />}
             </div>
             {/* end phone:view more */}
           </div>
@@ -119,8 +86,9 @@ const TableBody = (props) => {
             {item.contactPersonPhone}
           </div>
           <div className="hidden block md:table-cell md:border-b px-6 py-1 md:py-3 text-sm text-gray-700">
-            {renderElement(item.status)}
+            {renderStatusIcon(item.status)}
           </div>
+          {/* laptop:view more */}
 
           <div className="hidden block md:table-cell md:border-b px-6 py-1 md:py-3 text-sm text-gray-700">
             {/* vertical dots */}
@@ -133,14 +101,16 @@ const TableBody = (props) => {
               </button>
 
               {/* view more */}
-              {item.popupVisibility ? <Popup items={popupItems} /> : null}
+              {item.popupVisibility && <Popup items={popupItems} />}
               {/* view more */}
             </div>
             {/* end vertical dots */}
           </div>
+
+          {/* end laptop:view more */}
         </div>
       ))}
-    </React.Fragment>
+    </>
   );
 };
 

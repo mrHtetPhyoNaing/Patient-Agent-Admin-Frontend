@@ -5,10 +5,15 @@ import TableBody from "./tableBody";
 import Pagination from "./pagination";
 import { paginate } from "../../util/paginate";
 
-const Table = (props) => {
-  const { description, itemCount, tableHeaders, items } = props;
+const pageSize = 5;
 
-  const pageSize = 5;
+const Table = ({
+  description,
+  itemTotalCount,
+  tableHeaders,
+  items,
+  popupItems,
+}) => {
   const [currentPage, setCurrentPage] = useState(1);
 
   function handlePageChange(page) {
@@ -19,11 +24,13 @@ const Table = (props) => {
 
   return (
     <React.Fragment>
-      <TableDescription description={description} count={itemCount} />
+      <TableDescription description={description} totalCount={itemTotalCount} />
+
       <div className="bg-white block w-full md:table">
         <TableHeader items={tableHeaders} />
-        <TableBody items={registerations} />
+        <TableBody items={registerations} popupItems={popupItems} />
       </div>
+
       {/* Footer & Pagination */}
       <div className="bg-white block flex px-6 py-4 justify-between rounded-bl-lg rounded-br-lg">
         <div className="sm:flex-1 sm:flex sm:items-center sm:justify-between">

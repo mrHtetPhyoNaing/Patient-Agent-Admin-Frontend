@@ -1,9 +1,8 @@
 import React from "react";
 import _ from "lodash";
+import PropTypes from "prop-types";
 
-const Pagination = (props) => {
-  const { itemsCount, pageSize, currentPage, onPageChange } = props;
-
+const Pagination = ({ itemsCount, pageSize, currentPage, onPageChange }) => {
   const pagesCount = Math.ceil(itemsCount / pageSize);
   if (pagesCount === 1) return null;
 
@@ -28,11 +27,13 @@ const Pagination = (props) => {
       {pages.map((page) => (
         <button
           key={page}
-          onClick={() => onPageChange(page)}
           type="button"
           className={`${
-            page === currentPage ? `bg-indigo-100 text-indigo-500` : "text-gray-500"
+            page === currentPage
+              ? `bg-indigo-100 text-indigo-500`
+              : "text-gray-500"
           } -ml-px relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm leading-5 font-medium hover:text-gray-500 focus:z-10 focus:outline-none focus:border focus:shadow-outline-blue active:bg-gray-100 active:text-gray-700 transition ease-in-out duration-150`}
+          onClick={() => onPageChange(page)}
         >
           {page}
         </button>
@@ -53,6 +54,13 @@ const Pagination = (props) => {
       </button>
     </nav>
   );
+};
+
+Pagination.propTypes = {
+  itemsCount: PropTypes.number.isRequired,
+  pageSize: PropTypes.number.isRequired,
+  currentPage: PropTypes.number.isRequired,
+  onPageChange: PropTypes.func.isRequired,
 };
 
 export default Pagination;

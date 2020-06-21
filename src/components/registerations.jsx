@@ -1,10 +1,37 @@
 import React, { useState } from "react";
-import imgNoData from "../assets/nodata.svg";
 import getRegisterations from "../services/fakeRegisterations";
+import NotFound from "./common/notFound";
 import Table from "./common/table";
 
-const Registerations = (props) => {
-  let [data] = useState(getRegisterations());
+const popupItems = [
+  {
+    iconName: "create-outline",
+    label: "Edit",
+    hoverBgColor: "orange-100",
+    hoverTextColor: "orange-500",
+  },
+  {
+    iconName: "trash-outline",
+    label: "Delete",
+    hoverBgColor: "red-100",
+    hoverTextColor: "red-500",
+  },
+  {
+    iconName: "document-text-outline",
+    label: "View PDF",
+    hoverBgColor: "green-100",
+    hoverTextColor: "green-500",
+  },
+  {
+    iconName: "trending-up-outline",
+    label: "View More",
+    hoverBgColor: "ingido-100",
+    hoverTextColor: "indigo-500",
+  },
+];
+
+const Registerations = () => {
+  const [data] = useState(getRegisterations());
   const [tableHeaders] = useState([
     "No",
     "Name",
@@ -16,24 +43,16 @@ const Registerations = (props) => {
   ]);
 
   if (data.length === 0)
-    return (
-      <div className="mx-auto container sm:px-10 px-5">
-        <div className="flex items-center flex-col py-10">
-          <img className="h-64" src={imgNoData} alt="No data" />
-          <h4 class="font-bold tracking-wide text-lg text-orange-500 py-10">
-            There are no registerations until now.
-          </h4>
-        </div>
-      </div>
-    );
+    return <NotFound subTitle="There are no registerations til now." />;
 
   return (
     <div className="container mx-auto px-5 sm:px-10 pb-5">
       <Table
         description="Patient Registerations"
-        itemCount={data.length}
+        itemTotalCount={data.length}
         tableHeaders={tableHeaders}
         items={data}
+        popupItems={popupItems}
       />
     </div>
   );

@@ -1,7 +1,6 @@
 import React from "react";
 
-const TableHeader = (props) => {
-  const { items } = props;
+const TableHeader = ({ items }) => {
   return (
     <div className="hidden md:table-row w-full">
       {items.map((item) => (
