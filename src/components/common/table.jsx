@@ -37,11 +37,14 @@ const Table = ({
           <div>
             <p className="text-sm leading-5 text-gray-700 mb-2 md:mb-0">
               Showing
-              <span className="font-medium"> 1 </span>
+              <span className="font-medium">
+                {" "}
+                {currentPage * pageSize - 4}{" "}
+              </span>
               to
-              <span className="font-medium"> 10 </span>
+              <span className="font-medium"> {currentPage * pageSize} </span>
               of
-              <span className="font-medium"> 97 </span>
+              <span className="font-medium"> {items.length} </span>
               results
             </p>
           </div>
