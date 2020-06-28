@@ -30,17 +30,18 @@ const popupItems = [
   },
 ];
 
+const tableHeaders = [
+  "No",
+  "Name",
+  "NRC",
+  "Visiting Date",
+  "Phone",
+  "Status",
+  "",
+];
+
 const Registerations = () => {
   const [data] = useState(getRegisterations());
-  const [tableHeaders] = useState([
-    "No",
-    "Name",
-    "NRC",
-    "Visiting Date",
-    "Phone",
-    "Status",
-    "",
-  ]);
 
   if (data.length === 0)
     return <NotFound subTitle="There are no registerations til now." />;

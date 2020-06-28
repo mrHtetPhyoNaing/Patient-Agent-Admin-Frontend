@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import TableDescription from "./tableDescription";
 import TableHeader from "./tableHeader";
 import TableBody from "./tableBody";
 import Pagination from "./pagination";
 import { paginate } from "../../util/paginate";
+
+import FilterContext from "../../context/filterContext";
 
 const pageSize = 5;
 
@@ -19,6 +21,13 @@ const Table = ({
   function handlePageChange(page) {
     setCurrentPage(page);
   }
+
+  const { selectedOptions } = useContext(FilterContext);
+  const status = selectedOptions.status;
+  const duration = selectedOptions.duration;
+  const sort = selectedOptions.sort;
+
+  if (status !== 3) items = items.filter((item) => item.status === status);
 
   const registerations = paginate(items, currentPage, pageSize);
 
