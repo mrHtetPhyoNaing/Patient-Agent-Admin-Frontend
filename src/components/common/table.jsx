@@ -4,6 +4,7 @@ import TableHeader from "./tableHeader";
 import TableBody from "./tableBody";
 import Pagination from "./pagination";
 import { paginate } from "../../util/paginate";
+import _ from "lodash";
 
 import FilterContext from "../../context/filterContext";
 
@@ -25,15 +26,18 @@ const Table = ({
   const { selectedOptions } = useContext(FilterContext);
   const status = selectedOptions.status;
   const duration = selectedOptions.duration;
-  const sort = selectedOptions.sort;
+  const sortOrder = selectedOptions.sort;
 
-  if (status !== 3) items = items.filter((item) => item.status === status);
+  const filteredItems =
+    status !== 3 ? items.filter((item) => item.status === status) : items;
 
-  const registerations = paginate(items, currentPage, pageSize);
+  const sortedItems = _.orderBy(filteredItems, ["createdAt"], [sortOrder]);
+
+  const registerations = paginate(sortedItems, currentPage, pageSize);
 
   return (
     <React.Fragment>
-      <TableDescription description={description} totalCount={itemTotalCount} />
+      <TableDescription description={description} totalCount={items.length} />
 
       <div className="bg-white block w-full md:table">
         <TableHeader items={tableHeaders} />

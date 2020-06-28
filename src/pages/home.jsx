@@ -15,7 +15,7 @@ const Home = () => {
   const [selections, setSelection] = useState({
     status: 3,
     duration: 3,
-    sort: 0,
+    sort: "desc",
   });
 
   const filterOptions = [
@@ -71,27 +71,25 @@ const Home = () => {
     },
     <hr />,
     {
-      id: "date-asc",
-      name: "sort",
-      label: "Last Registered",
-      value: "lastRegistered",
-      defaultChecked: selections.sort === 0,
-    },
-    {
       id: "date-desc",
       name: "sort",
+      label: "Last Registered",
+      value: "desc",
+      defaultChecked: selections.sort === "desc",
+    },
+    {
+      id: "date-asc",
+      name: "sort",
       label: "First Registered",
-      value: "firstRegistered",
-      defaultChecked: selections.sort === 1,
+      value: "asc",
+      defaultChecked: selections.sort === "asc",
     },
   ];
 
   function handleSelect(event) {
     const { name, value } = event.target;
-
     const radioSelections = { ...selections };
-    radioSelections[name] = parseInt(value);
-
+    radioSelections[name] = /^\d+$/.test(value) ? parseInt(value) : value;
     setSelection(radioSelections);
     setFilterOptionsVisibility(false);
   }
