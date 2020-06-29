@@ -1,10 +1,10 @@
+import _ from "lodash";
 import React, { useState, useContext } from "react";
 import TableDescription from "./tableDescription";
 import TableHeader from "./tableHeader";
 import TableBody from "./tableBody";
 import Pagination from "./pagination";
 import { paginate } from "../../util/paginate";
-import _ from "lodash";
 
 import FilterContext from "../../context/filterContext";
 
@@ -35,9 +35,18 @@ const Table = ({
 
   const registerations = paginate(sortedItems, currentPage, pageSize);
 
+  const totalItemsCount = filteredItems.length;
+  const itemsCount = currentPage * pageSize;
+  const firstItemCount = itemsCount - 4;
+  const lastItemCount =
+    totalItemsCount > itemsCount ? itemsCount : totalItemsCount;
+
   return (
     <React.Fragment>
-      <TableDescription description={description} totalCount={items.length} />
+      <TableDescription
+        description={description}
+        totalCount={totalItemsCount}
+      />
 
       <div className="bg-white block w-full md:table">
         <TableHeader items={tableHeaders} />
@@ -50,19 +59,16 @@ const Table = ({
           <div>
             <p className="text-sm leading-5 text-gray-700 mb-2 md:mb-0">
               Showing
-              <span className="font-medium">
-                {" "}
-                {currentPage * pageSize - 4}{" "}
-              </span>
+              <span className="font-medium"> {firstItemCount} </span>
               to
-              <span className="font-medium"> {currentPage * pageSize} </span>
+              <span className="font-medium"> {lastItemCount} </span>
               of
-              <span className="font-medium"> {items.length} </span>
+              <span className="font-medium"> {totalItemsCount} </span>
               results
             </p>
           </div>
           <Pagination
-            itemsCount={items.length}
+            itemsCount={filteredItems.length}
             pageSize={pageSize}
             currentPage={currentPage}
             onPageChange={handlePageChange}
