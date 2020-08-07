@@ -156,7 +156,7 @@ const registerations = [
   {
     _id: "5ec8b5a18afc0d0017e8d64d",
     status: 1,
-    name: "Gfatt",
+    name: "Yone Lay",
     gender: "female",
     fatherName: "U Ba",
     birthday: "1990-12-12",
@@ -178,7 +178,7 @@ const registerations = [
   {
     _id: "5ec8b5a18afc0d0017e8d64d",
     status: 1,
-    name: "Gfatt",
+    name: "Myint Myat",
     gender: "female",
     fatherName: "U Ba",
     birthday: "1990-12-12",
@@ -200,7 +200,7 @@ const registerations = [
   {
     _id: "5ec8b5a18afc0d0017e8d64d",
     status: 1,
-    name: "Gfatt",
+    name: "Lu Min",
     gender: "female",
     fatherName: "U Ba",
     birthday: "1990-12-12",
@@ -222,7 +222,7 @@ const registerations = [
   {
     _id: "5ec8b5a18afc0d0017e8d64d",
     status: 1,
-    name: "Gfatt",
+    name: "Htun Eaindra Bo",
     gender: "female",
     fatherName: "U Ba",
     birthday: "1990-12-12",
@@ -244,7 +244,7 @@ const registerations = [
   {
     _id: "5ec8b5a18afc0d0017e8d64d",
     status: 2,
-    name: "Gfatt",
+    name: "Muu Lar",
     gender: "female",
     fatherName: "U Ba",
     birthday: "1990-12-12",
@@ -266,7 +266,7 @@ const registerations = [
   {
     _id: "5ec8b5a18afc0d0017e8d64d",
     status: 2,
-    name: "Gfatt",
+    name: "Chan Chan",
     gender: "female",
     fatherName: "U Ba",
     birthday: "1990-12-12",
@@ -288,7 +288,7 @@ const registerations = [
   {
     _id: "5ec8b5a18afc0d0017e8d64d",
     status: 2,
-    name: "Gfatt",
+    name: "Kyaw Kyaw Htun",
     gender: "female",
     fatherName: "U Ba",
     birthday: "1990-12-12",
@@ -310,7 +310,7 @@ const registerations = [
   {
     _id: "5ec8b5a18afc0d0017e8d64d",
     status: 2,
-    name: "Gfatt",
+    name: "Lin Lin",
     gender: "female",
     fatherName: "U Ba",
     birthday: "1990-12-12",
@@ -332,7 +332,7 @@ const registerations = [
   {
     _id: "5ec8b5a18afc0d0017e8d64d",
     status: 2,
-    name: "Gfatt",
+    name: "Kyar Pout",
     gender: "female",
     fatherName: "U Ba",
     birthday: "1990-12-12",
@@ -354,7 +354,7 @@ const registerations = [
   {
     _id: "5ec8b5a18afc0d0017e8d64d",
     status: 2,
-    name: "Gfatt",
+    name: "U A",
     gender: "female",
     fatherName: "U Ba",
     birthday: "1990-12-12",
@@ -376,7 +376,7 @@ const registerations = [
   {
     _id: "5ec8b5a18afc0d0017e8d64d",
     status: 2,
-    name: "Gfatt",
+    name: "U B",
     gender: "female",
     fatherName: "U Ba",
     birthday: "1990-12-12",
@@ -398,7 +398,7 @@ const registerations = [
   {
     _id: "5ec8b5a18afc0d0017e8d64d",
     status: 2,
-    name: "Gfatt",
+    name: "U C",
     gender: "female",
     fatherName: "U Ba",
     birthday: "1990-12-12",
@@ -420,7 +420,7 @@ const registerations = [
   {
     _id: "5ec8b5a18afc0d0017e8d64d",
     status: 2,
-    name: "Gfatt",
+    name: "U D",
     gender: "female",
     fatherName: "U Ba",
     birthday: "1990-12-12",
@@ -442,7 +442,7 @@ const registerations = [
   {
     _id: "5ec8b5a18afc0d0017e8d64d",
     status: 2,
-    name: "Gfatt",
+    name: "U E",
     gender: "female",
     fatherName: "U Ba",
     birthday: "1990-12-12",
@@ -464,7 +464,7 @@ const registerations = [
   {
     _id: "5ec8b5a18afc0d0017e8d64d",
     status: 2,
-    name: "Gfatt",
+    name: "U F",
     gender: "female",
     fatherName: "U Ba",
     birthday: "1990-12-12",
@@ -486,7 +486,7 @@ const registerations = [
   {
     _id: "5ec8b5a18afc0d0017e8d64d",
     status: 2,
-    name: "Gfatt",
+    name: "U G",
     gender: "female",
     fatherName: "U Ba",
     birthday: "1990-12-12",
@@ -508,7 +508,7 @@ const registerations = [
   {
     _id: "5ec8b5a18afc0d0017e8d64d",
     status: 2,
-    name: "Gfatt",
+    name: "U H",
     gender: "female",
     fatherName: "U Ba",
     birthday: "1990-12-12",
@@ -530,7 +530,7 @@ const registerations = [
   {
     _id: "5ec8b5a18afc0d0017e8d64d",
     status: 2,
-    name: "Gfatt",
+    name: "U I",
     gender: "female",
     fatherName: "U Ba",
     birthday: "1990-12-12",
@@ -552,7 +552,7 @@ const registerations = [
   {
     _id: "5ec8b5a18afc0d0017e8d64d",
     status: 2,
-    name: "Gfatt",
+    name: "U J",
     gender: "female",
     fatherName: "U Ba",
     birthday: "1990-12-12",
@@ -574,7 +574,7 @@ const registerations = [
   {
     _id: "5ec8b5a18afc0d0017e8d64d",
     status: 2,
-    name: "Gfatt",
+    name: "U K",
     gender: "female",
     fatherName: "U Ba",
     birthday: "1990-12-12",
@@ -596,7 +596,7 @@ const registerations = [
   {
     _id: "5ec8b5a18afc0d0017e8d64d",
     status: 2,
-    name: "Gfatt",
+    name: "U L",
     gender: "female",
     fatherName: "U Ba",
     birthday: "1990-12-12",
@@ -618,7 +618,7 @@ const registerations = [
   {
     _id: "5ec8b5a18afc0d0017e8d64d",
     status: 2,
-    name: "Gfatt",
+    name: "U M",
     gender: "female",
     fatherName: "U Ba",
     birthday: "1990-12-12",
@@ -640,7 +640,7 @@ const registerations = [
   {
     _id: "5ec8b5a18afc0d0017e8d64d",
     status: 2,
-    name: "Gfatt",
+    name: "U N",
     gender: "female",
     fatherName: "U Ba",
     birthday: "1990-12-12",
@@ -662,7 +662,7 @@ const registerations = [
   {
     _id: "5ec8b5a18afc0d0017e8d64d",
     status: 2,
-    name: "Gfatt",
+    name: "U O",
     gender: "female",
     fatherName: "U Ba",
     birthday: "1990-12-12",
@@ -684,7 +684,7 @@ const registerations = [
   {
     _id: "5ec8b5a18afc0d0017e8d64d",
     status: 2,
-    name: "Gfatt",
+    name: "U P",
     gender: "female",
     fatherName: "U Ba",
     birthday: "1990-12-12",
@@ -706,7 +706,7 @@ const registerations = [
   {
     _id: "5ec8b5a18afc0d0017e8d64d",
     status: 2,
-    name: "Gfatt",
+    name: "U Q",
     gender: "female",
     fatherName: "U Ba",
     birthday: "1990-12-12",
@@ -728,7 +728,7 @@ const registerations = [
   {
     _id: "5ec8b5a18afc0d0017e8d64d",
     status: 2,
-    name: "Gfatt",
+    name: "U R",
     gender: "female",
     fatherName: "U Ba",
     birthday: "1990-12-12",
@@ -750,7 +750,7 @@ const registerations = [
   {
     _id: "5ec8b5a18afc0d0017e8d64d",
     status: 0,
-    name: "Gfatt",
+    name: "U S",
     gender: "female",
     fatherName: "U Ba",
     birthday: "1990-12-12",
@@ -772,7 +772,7 @@ const registerations = [
   {
     _id: "5ec8b5a18afc0d0017e8d64d",
     status: 0,
-    name: "Gfatt",
+    name: "U T",
     gender: "female",
     fatherName: "U Ba",
     birthday: "1990-12-12",
@@ -794,7 +794,7 @@ const registerations = [
   {
     _id: "5ec8b5a18afc0d0017e8d64d",
     status: 2,
-    name: "Gfatt",
+    name: "U U",
     gender: "female",
     fatherName: "U Ba",
     birthday: "1990-12-12",
@@ -816,7 +816,7 @@ const registerations = [
   {
     _id: "5ec8b5a18afc0d0017e8d64d",
     status: 2,
-    name: "Gfatt",
+    name: "U V",
     gender: "female",
     fatherName: "U Ba",
     birthday: "1990-12-12",
@@ -838,7 +838,7 @@ const registerations = [
   {
     _id: "5ec8b5a18afc0d0017e8d64d",
     status: 2,
-    name: "Gfatt",
+    name: "U X",
     gender: "female",
     fatherName: "U Ba",
     birthday: "1990-12-12",
@@ -860,7 +860,7 @@ const registerations = [
   {
     _id: "5ec8b5a18afc0d0017e8d64d",
     status: 2,
-    name: "Gfatt",
+    name: "U Y",
     gender: "female",
     fatherName: "U Ba",
     birthday: "1990-12-12",
@@ -882,7 +882,7 @@ const registerations = [
   {
     _id: "5ec8b5a18afc0d0017e8d64d",
     status: 2,
-    name: "Gfatt",
+    name: "U Z",
     gender: "female",
     fatherName: "U Ba",
     birthday: "1990-12-12",
@@ -904,7 +904,7 @@ const registerations = [
   {
     _id: "5ec8b5a18afc0d0017e8d64d",
     status: 2,
-    name: "Gfatt",
+    name: "U AA",
     gender: "female",
     fatherName: "U Ba",
     birthday: "1990-12-12",
