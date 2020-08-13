@@ -11,6 +11,8 @@ const searchItems = [
 
 const Search = () => {
   const [inputPlaceholder, setInputPlaceholder] = useState("Mg Ba");
+  const [searchKey, setSearchKey] = useState("Name");
+  const [searchValue, setSearchValue] = useState("");
 
   function handleDropdownChange(event) {
     let placeholder = "";
@@ -20,7 +22,17 @@ const Search = () => {
     else if (option === "NRC") placeholder = "1/MaMaNa(N) 123456";
     else if (option === "Phone") placeholder = "09123456789";
 
+    setSearchKey(option);
     setInputPlaceholder(placeholder);
+  }
+
+  function handleOnChange(event) {
+    setSearchValue(event.target.value);
+  }
+
+  function handleOnClick() {
+    console.log(searchKey); // Ok
+    console.log(searchValue); // Ok
   }
 
   return (
@@ -28,9 +40,14 @@ const Search = () => {
       <div className="sm:mb-0">
         <DropDown items={searchItems} onChange={handleDropdownChange} />
 
-        <InputText name="search" placeholder={inputPlaceholder} />
+        <InputText
+          name="search"
+          placeholder={inputPlaceholder}
+          value={searchValue}
+          onChange={handleOnChange}
+        />
 
-        <Button icon="search-outline" label="Search" />
+        <Button icon="search-outline" label="Search" onClick={handleOnClick} />
       </div>
     </div>
   );

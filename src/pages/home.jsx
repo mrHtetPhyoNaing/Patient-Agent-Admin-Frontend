@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Header from "../components/header";
 import SearchBar from "../components/searchBar";
 import Registerations from "../components/registerations";
+import getRegisterations from "../services/fakeRegisterations";
 
 import FilterContext from "../context/filterContext";
 
@@ -107,7 +108,7 @@ const Home = () => {
         }}
       >
         <SearchBar />
-        <Registerations />
+        <Registerations values={getRegisterations()} />
       </FilterContext.Provider>
     </div>
   );

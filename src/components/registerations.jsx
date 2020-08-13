@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import getRegisterations from "../services/fakeRegisterations";
+import React, { useState, useEffect } from "react";
 import NotFound from "./common/notFound";
 import Table from "./common/table";
 
@@ -40,8 +39,12 @@ const tableHeaders = [
   "",
 ];
 
-const Registerations = () => {
-  const [data] = useState(getRegisterations());
+const Registerations = ({ values }) => {
+  const [data, setData] = useState(values);
+
+  useEffect(() => {
+    setData(values);
+  }, [values]);
 
   if (data.length === 0)
     return <NotFound subTitle="There are no registerations til now." />;
