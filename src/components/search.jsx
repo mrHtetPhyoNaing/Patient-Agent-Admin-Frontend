@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import DropDown from "./common/dropdown";
 import InputText from "./common/inputText";
 
 const searchItems = [
-  { name: "Name", defaultValue: true },
-  { name: "NRC" },
-  { name: "Phone" },
+  { name: "Name", value: "name", defaultValue: true },
+  { name: "NRC", value: "nrc" },
+  { name: "Phone", value: "phone" },
 ];
 
 const Search = ({
@@ -13,22 +13,10 @@ const Search = ({
   searchValue,
   setSearchKey,
   setSearchValue,
+  inputPlaceholder,
   handleSearchOnChange,
+  handleDropdownChange,
 }) => {
-  const [inputPlaceholder, setInputPlaceholder] = useState("Mg Ba");
-
-  function handleDropdownChange(event) {
-    let placeholder = "";
-    let option = event.target.value;
-
-    if (option === "Name") placeholder = "Mg Ba";
-    else if (option === "NRC") placeholder = "1/MaMaNa(N) 123456";
-    else if (option === "Phone") placeholder = "09123456789";
-
-    setSearchKey(option);
-    setInputPlaceholder(placeholder);
-  }
-
   return (
     <div className="bg-white px-4 rounded-lg py-5 shadow-sm">
       <div className="sm:mb-0">

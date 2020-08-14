@@ -83,7 +83,7 @@ const TableBody = ({ items: passedItems, popupItems }) => {
             {item.visitingDate}
           </div>
           <div className="block md:table-cell md:border-b px-6 py-1 md:py-3 text-sm text-gray-700">
-            {item.contactPersonPhone}
+            {item.phone}
           </div>
           <div className="hidden block md:table-cell md:border-b px-6 py-1 md:py-3 text-sm text-gray-700">
             {renderStatusIcon(item.status)}
