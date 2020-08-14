@@ -12,13 +12,7 @@ import FilterContext from "../../context/filterContext";
 
 const pageSize = 5;
 
-const Table = ({
-  description,
-  itemTotalCount,
-  tableHeaders,
-  items,
-  popupItems,
-}) => {
+const Table = ({ description, tableHeaders, items, popupItems }) => {
   const [currentPage, setCurrentPage] = useState(1);
 
   function handlePageChange(page) {
@@ -54,12 +48,12 @@ const Table = ({
     return (
       <NotFound
         subTitle="There are no registerations til now "
-        emphasizeText="with your filter values."
+        emphasizeText="with your filtered values."
       />
     );
 
   return (
-    <React.Fragment>
+    <>
       <TableDescription
         description={description}
         totalCount={totalItemsCount}
@@ -93,7 +87,7 @@ const Table = ({
         </div>
       </div>
       {/* end Footer & Pagination */}
-    </React.Fragment>
+    </>
   );
 };
 

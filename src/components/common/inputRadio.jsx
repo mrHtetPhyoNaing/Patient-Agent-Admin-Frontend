@@ -10,7 +10,7 @@ const InputRadio = ({
   changed,
 }) => {
   return (
-    <React.Fragment>
+    <>
       <input
         className={classes}
         type="radio"
@@ -23,7 +23,7 @@ const InputRadio = ({
       <label htmlFor={id} className="ml-2 text-gray-800 text-xs md:text-sm">
         {label}
       </label>
-    </React.Fragment>
+    </>
   );
 };
 

@@ -53,7 +53,6 @@ const Registerations = ({ values }) => {
     <div className="container mx-auto px-5 sm:px-10 pb-5">
       <Table
         description="Patient Registerations"
-        itemTotalCount={data.length}
         tableHeaders={tableHeaders}
         items={data}
         popupItems={popupItems}

@@ -1,18 +1,10 @@
 import React from "react";
 import DropDown from "./common/dropdown";
 import InputText from "./common/inputText";
-
-const searchItems = [
-  { name: "Name", value: "name", defaultValue: true },
-  { name: "NRC", value: "nrc" },
-  { name: "Phone", value: "phone" },
-];
+import searchItems from "./../services/searchItems";
 
 const Search = ({
-  searchKey,
   searchValue,
-  setSearchKey,
-  setSearchValue,
   inputPlaceholder,
   handleSearchOnChange,
   handleDropdownChange,

@@ -10,7 +10,7 @@ const TableBody = ({ items: passedItems, popupItems }) => {
   }, [passedItems]);
 
   function renderStatusIcon(status) {
-    if (status === 0) {
+    if (status === 0)
       return (
         <Icon
           title="Send mail"
@@ -18,7 +18,7 @@ const TableBody = ({ items: passedItems, popupItems }) => {
           classes="text-indigo-400 bg-indigo-100"
         />
       );
-    } else if (status === 1) {
+    else if (status === 1)
       return (
         <Icon
           title="Successfully Sent"
@@ -26,7 +26,7 @@ const TableBody = ({ items: passedItems, popupItems }) => {
           classes="text-green-400 bg-green-100"
         />
       );
-    } else if (status === 2) {
+    else if (status === 2) {
       return (
         <Icon
           title="Retry sending mail"
@@ -61,7 +61,7 @@ const TableBody = ({ items: passedItems, popupItems }) => {
         >
           <div className="flex md:table-cell md:border-b px-6 py-1 md:py-3 text-sm text-gray-700 items-center">
             <span className="flex-auto text-indigo-500">#{item.id}</span>
-            {/* phone:view more */}
+            {/* phone-size:view more */}
             <div className="md:hidden py-1 text-sm text-gray-700 relative">
               <button
                 onClick={() => handleViewMore(item)}
@@ -69,9 +69,11 @@ const TableBody = ({ items: passedItems, popupItems }) => {
               >
                 <ion-icon name="ellipsis-vertical-outline"></ion-icon>
               </button>
+              {/* view more */}
               {item.popupVisibility && <Popup items={popupItems} />}
+              {/* view more */}
             </div>
-            {/* end phone:view more */}
+            {/* end phone-size:view more */}
           </div>
           <div className="block md:table-cell md:border-b px-6 py-1 md:py-3 text-sm text-gray-700">
             {item.name}
@@ -88,8 +90,8 @@ const TableBody = ({ items: passedItems, popupItems }) => {
           <div className="hidden block md:table-cell md:border-b px-6 py-1 md:py-3 text-sm text-gray-700">
             {renderStatusIcon(item.status)}
           </div>
-          {/* laptop:view more */}
 
+          {/* laptop-size:view more */}
           <div className="hidden block md:table-cell md:border-b px-6 py-1 md:py-3 text-sm text-gray-700">
             {/* vertical dots */}
             <div className="relative hidden md:inline-block">
@@ -106,8 +108,7 @@ const TableBody = ({ items: passedItems, popupItems }) => {
             </div>
             {/* end vertical dots */}
           </div>
-
-          {/* end laptop:view more */}
+          {/* end laptop-size:view more */}
         </div>
       ))}
     </>
