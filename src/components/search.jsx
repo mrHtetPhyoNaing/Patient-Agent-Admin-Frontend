@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import DropDown from "./common/dropdown";
 import InputText from "./common/inputText";
-import Button from "./common/button";
 
 const searchItems = [
   { name: "Name", defaultValue: true },
@@ -9,10 +8,14 @@ const searchItems = [
   { name: "Phone" },
 ];
 
-const Search = () => {
+const Search = ({
+  searchKey,
+  searchValue,
+  setSearchKey,
+  setSearchValue,
+  handleSearchOnChange,
+}) => {
   const [inputPlaceholder, setInputPlaceholder] = useState("Mg Ba");
-  const [searchKey, setSearchKey] = useState("Name");
-  const [searchValue, setSearchValue] = useState("");
 
   function handleDropdownChange(event) {
     let placeholder = "";
@@ -26,15 +29,6 @@ const Search = () => {
     setInputPlaceholder(placeholder);
   }
 
-  function handleOnChange(event) {
-    setSearchValue(event.target.value);
-  }
-
-  function handleOnClick() {
-    console.log(searchKey); // Ok
-    console.log(searchValue); // Ok
-  }
-
   return (
     <div className="bg-white px-4 rounded-lg py-5 shadow-sm">
       <div className="sm:mb-0">
@@ -44,10 +38,8 @@ const Search = () => {
           name="search"
           placeholder={inputPlaceholder}
           value={searchValue}
-          onChange={handleOnChange}
+          onChange={handleSearchOnChange}
         />
-
-        <Button icon="search-outline" label="Search" onClick={handleOnClick} />
       </div>
     </div>
   );

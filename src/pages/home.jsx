@@ -12,6 +12,11 @@ import FilterContext from "../context/filterContext";
   sort     => lastRegister = 0, firstRegister = 1
 */
 const Home = () => {
+  const [registerations, setRegisterations] = useState(getRegisterations());
+
+  const [searchKey, setSearchKey] = useState("Name");
+  const [searchValue, setSearchValue] = useState("");
+
   const [filterOptionsVisibility, setFilterOptionsVisibility] = useState(false);
   const [selections, setSelection] = useState({
     status: 3,
@@ -95,6 +100,19 @@ const Home = () => {
     setFilterOptionsVisibility(false);
   }
 
+  function handleSearchOnChange(searchedValue) {
+    setSearchValue(searchedValue);
+
+    let results = getRegisterations();
+    if (searchedValue && searchKey === "Name") {
+      results = results.filter((registeration) =>
+        registeration.name.toLowerCase().startsWith(searchedValue.toLowerCase())
+      );
+    }
+
+    return setRegisterations(results);
+  }
+
   return (
     <div className="w-full">
       <Header />
@@ -107,8 +125,14 @@ const Home = () => {
           onOptionSelect: handleSelect,
         }}
       >
-        <SearchBar />
-        <Registerations values={getRegisterations()} />
+        <SearchBar
+          searchKey={searchKey}
+          searchValue={searchValue}
+          setSearchKey={setSearchKey}
+          setSearchValue={setSearchValue}
+          handleSearchOnChange={handleSearchOnChange}
+        />
+        <Registerations values={registerations} />
       </FilterContext.Provider>
     </div>
   );
