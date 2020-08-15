@@ -108,10 +108,9 @@ const Home = () => {
 
     let results = getRegisterations();
     if (searchedValue && (searchKey === "name" || searchKey === "phone")) {
+      const regex = new RegExp(searchedValue, "i");
       results = results.filter((registeration) => {
-        return registeration[searchKey]
-          .toLowerCase()
-          .startsWith(searchedValue.toLowerCase());
+        return registeration[searchKey].toLowerCase().match(regex);
       });
     }
 
