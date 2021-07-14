@@ -1,43 +1,48 @@
-import React, { useState, useEffect } from "react";
-import NotFound from "./common/notFound";
-import Table from "./common/table";
+import React, { useState, useEffect } from 'react';
+import NotFound from './common/notFound';
+import Table from './common/table';
 
 const popupItems = [
   {
-    iconName: "create-outline",
-    label: "Edit",
-    hoverBgColor: "orange-100",
-    hoverTextColor: "orange-500",
+    iconName: 'create-outline',
+    label: 'Edit',
+    hoverBgColor: 'orange-100',
+    hoverTextColor: 'orange-500',
   },
   {
-    iconName: "trash-outline",
-    label: "Delete",
-    hoverBgColor: "red-100",
-    hoverTextColor: "red-500",
+    iconName: 'trash-outline',
+    label: 'Delete',
+    hoverBgColor: 'red-100',
+    hoverTextColor: 'red-500',
   },
   {
-    iconName: "document-text-outline",
-    label: "View PDF",
-    hoverBgColor: "green-100",
-    hoverTextColor: "green-500",
+    iconName: 'document-text-outline',
+    label: 'View PDF',
+    hoverBgColor: 'green-100',
+    hoverTextColor: 'green-500',
   },
   {
-    iconName: "trending-up-outline",
-    label: "View More",
-    hoverBgColor: "ingido-100",
-    hoverTextColor: "indigo-500",
+    iconName: 'trending-up-outline',
+    label: 'View More',
+    hoverBgColor: 'ingido-100',
+    hoverTextColor: 'indigo-500',
+    onClick: handleViewMore,
   },
 ];
 
 const tableHeaders = [
-  "No",
-  "Name",
-  "NRC",
-  "Visiting Date",
-  "Phone",
-  "Status",
-  "",
+  'No',
+  'Name',
+  'NRC',
+  'Visiting Date',
+  'Phone',
+  'Status',
+  '',
 ];
+
+function handleViewMore() {
+  alert('a');
+}
 
 const Registerations = ({ values }) => {
   const [data, setData] = useState(values);

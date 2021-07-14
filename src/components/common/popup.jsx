@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const Popup = ({ items }) => {
   return (
@@ -6,6 +6,7 @@ const Popup = ({ items }) => {
       {items.map((item) => (
         <div
           key={item.label}
+          onClick={item.onClick}
           className={`py-1 px-3 cursor-pointer w-32 text-gray-800 rounded-lg 
           hover:bg-${item.hoverBgColor}
           hover:text-${item.hoverTextColor}`}
